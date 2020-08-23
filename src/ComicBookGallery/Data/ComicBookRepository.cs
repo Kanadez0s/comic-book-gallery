@@ -8,7 +8,7 @@ namespace ComicBookGallery.Data
 {
     public class ComicBookRepository
     {
-        public static ComicBook[] _comicBooks = new ComicBook[]
+        private static ComicBook[] _comicBooks = new ComicBook[]
         {
             new ComicBook()
             {
@@ -75,6 +75,12 @@ namespace ComicBookGallery.Data
             }
 
             return comicBookToReturn;
+        }
+
+
+        public ComicBook[] GetComicBooks()
+        {
+            return _comicBooks;
         }
 
     }
